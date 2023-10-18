@@ -42,7 +42,7 @@ const Nike = () => {
             <div>
                 <h1 className="text-4xl font-semibold text-center mt-10">Nike Products</h1>
             </div>
-            <div className="flex flex-wrap gap-5 justify-center">
+            <div className="flex flex-wrap gap-7 lg:my-10 my-5 justify-center">
                 {
                     loaderData ? loaderData.map(element => <Card key={element._id} card={element}></Card>)
                         :
@@ -54,8 +54,11 @@ const Nike = () => {
 };
 
 const Card = ({ card }) => {
+    const handleitem =(id)=>{
+        console.log(id);
+    }
     return (
-        <div className="card w-72 border-2 border-gray-400 lg:my-10 my-5 shadow-2xl p-2">
+        <div className="card w-72 border-2 border-gray-400  shadow-2xl p-2">
             <img className="w-72 h-80" src={card.photourl} alt="" />
             <div className="my-2">
                 <h1><span>Name :</span> {card.name}</h1>
@@ -64,7 +67,7 @@ const Card = ({ card }) => {
                 <p><span>Rating :</span> {card.rating}</p>
             </div>
             <div className="flex  justify-around">
-                <button className="btn">Details</button>
+                <button onClick={()=>handleitem(card._id)} className="btn">Details</button>
                 <button className="btn">Update</button>
             </div>
 

@@ -11,7 +11,7 @@ const Calvin = () => {
     const loaderData = useLoaderData()
     return (
         <section>
-        <h1 className="text-5xl my-7 font-bold text-center underline"> Nike</h1>
+        <h1 className="text-5xl my-7 font-bold text-center underline"> Calvin Klein</h1>
         <div className="lg:mx-8">
             <Swiper
                 modules={[Navigation, EffectCoverflow, Autoplay, Pagination, Scrollbar, A11y]}
@@ -35,11 +35,11 @@ const Calvin = () => {
                 <SwiperSlide><img className=" mx-auto h-[500px]" src='https://i.ibb.co/9G3hG43/ck-banner1.jpg' alt="" /></SwiperSlide>
                 <SwiperSlide><img className=" mx-auto h-[500px]" src="https://i.ibb.co/pPT1SXh/ck-banner2.jpg" alt="" /></SwiperSlide>
                 <SwiperSlide><img className=" mx-auto h-[500px]" src="https://i.ibb.co/9hQNK9J/ck-banner3.jpg" alt="" /></SwiperSlide>
-                {/* <SwiperSlide><img className=" mx-auto h-[500px]" src="https://i.ibb.co/k5vNRfd/nike-banner-4.jpg" alt="" /></SwiperSlide> */}
+                <SwiperSlide><img className=" mx-auto h-[500px]" src="https://i.ibb.co/k5vNRfd/nike-banner-4.jpg" alt="" /></SwiperSlide>
             </Swiper>
         </div>
         <div>
-            <h1 className="text-4xl font-semibold text-center mt-10">Nike Products</h1>
+            <h1 className="text-4xl font-semibold text-center mt-10">Calvin Klein Products</h1>
         </div>
         <div className="flex flex-wrap gap-5 justify-center">
             {

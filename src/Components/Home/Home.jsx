@@ -3,43 +3,39 @@ import { NavLink, Navigate, useNavigate } from "react-router-dom";
 
 
 const Home = () => {
-    const navigate1 = useNavigate()
-    const navigate2 = useNavigate()
-    const navigate3 = useNavigate()
-    const navigate4 = useNavigate()
-    const navigate5 = useNavigate()
-    const navigate6 = useNavigate()
+    const navigate = useNavigate()
 
     const handlenike = () => {
 
-navigate1(`/nike`)
+navigate(`/nike`)
     }
     const handleadidas = () => {
-
+        navigate(`/adidas`)
     }
     const handlegucci = () => {
-
+        navigate(`/gucci`)
     }
     const handlezara = () => {
-
+        navigate(`/zara`)
     }
     const handleck = () => {
-
+        navigate(`/ck`)
     }
     const handlehm = () => {
-
+        navigate(`/h&m`)
     }
     return (
         <section>
-            <div>
-                <h1>Banner</h1>
+            <div className="" >
+                <img className="h-[600px] w-full" src="https://i.ibb.co/dKJXY48/Baner.jpg" alt="" />
+                <h1>hello</h1>
 
             </div>
 
             <div>
                 <h1 className="text-3xl font-bold text-center lg:my-10 my-5">Our Provide Brands </h1>
-                <div onClick={handlenike} className="flex flex-wrap gap-10 justify-center lg:mx-10 mx-2">
-                    <div className="w-80 border-2 border-gray-400 p-2 card">
+                <div  className="flex flex-wrap gap-10 justify-center lg:mx-10 mx-2">
+                    <div onClick={handlenike} className="w-80 border-2 border-gray-400 p-2 card">
                         <img className="w-80 h-56" src='https://i.ibb.co/5xFK9wF/desktop-wallpaper-best-nike-logo-gallery.jpg' alt="" />
                         <h1 className="text-lg text-center font-semibold">Nike</h1>
                     </div>

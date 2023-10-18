@@ -11,7 +11,7 @@ const Hommes = () => {
     const loaderData = useLoaderData()
     return (
         <section>
-        <h1 className="text-5xl my-7 font-bold text-center underline"> Nike</h1>
+        <h1 className="text-5xl my-7 font-bold text-center underline"> H&M</h1>
         <div className="lg:mx-8">
             <Swiper
                 modules={[Navigation, EffectCoverflow, Autoplay, Pagination, Scrollbar, A11y]}
@@ -32,20 +32,20 @@ const Hommes = () => {
                 autoplay={{ delay: 2000 }}
                 navigation
             >
-                <SwiperSlide><img className=" mx-auto h-[500px]" src='https://i.ibb.co/47nmbYX/Nike-banner.jpg' alt="" /></SwiperSlide>
-                <SwiperSlide><img className=" mx-auto h-[500px]" src="https://i.ibb.co/HgdTVy1/nike-banner-2.jpg" alt="" /></SwiperSlide>
-                <SwiperSlide><img className=" mx-auto h-[500px]" src="https://i.ibb.co/419hKr2/nike-banner-3.jpg" alt="" /></SwiperSlide>
+                <SwiperSlide><img className=" mx-auto h-[500px]" src='https://i.ibb.co/kmxgjsP/hm-banner1.jpg' alt="" /></SwiperSlide>
+                <SwiperSlide><img className=" mx-auto h-[500px]" src="https://i.ibb.co/G3RkZs8/hm-banner2.jpg" alt="" /></SwiperSlide>
+                <SwiperSlide><img className=" mx-auto h-[500px]" src="https://i.ibb.co/6Yykr62/hm-banner3.jpg" alt="" /></SwiperSlide>
                 <SwiperSlide><img className=" mx-auto h-[500px]" src="https://i.ibb.co/k5vNRfd/nike-banner-4.jpg" alt="" /></SwiperSlide>
             </Swiper>
         </div>
         <div>
-            <h1 className="text-4xl font-semibold text-center mt-10">Nike Products</h1>
+            <h1 className="text-4xl font-semibold text-center mt-10">H&M Products</h1>
         </div>
         <div className="flex flex-wrap gap-5 justify-center">
             {
-                loaderData ? loaderData.map(element => <Card key={element._id} card={element}></Card>)
+                loaderData.length>0? loaderData?.map(element => <Card key={element._id} card={element}></Card>)
                     :
-                    <h1 className="text-4xl text-center font-bold ">NO MORE PRODUCTS</h1>
+                    <h1 className="text-4xl my-10 font-bold  ">NO MORE PRODUCTS</h1>
             }
         </div>
     </section>
