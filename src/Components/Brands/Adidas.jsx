@@ -32,9 +32,9 @@ const Adidas = () => {
                 autoplay={{ delay: 2000 }}
                 navigation
             >
-                <SwiperSlide><img className=" mx-auto h-[500px]" src='https://i.ibb.co/47nmbYX/Adidas-banner.jpg' alt="" /></SwiperSlide>
-                <SwiperSlide><img className=" mx-auto h-[500px]" src="https://i.ibb.co/HgdTVy1/nike-banner-2.jpg" alt="" /></SwiperSlide>
-                <SwiperSlide><img className=" mx-auto h-[500px]" src="https://i.ibb.co/419hKr2/nike-banner-3.jpg" alt="" /></SwiperSlide>
+                <SwiperSlide><img className=" mx-auto h-[500px]" src='https://i.ibb.co/CVVVFQT/adidas-banner.jpg' alt="" /></SwiperSlide>
+                <SwiperSlide><img className=" mx-auto h-[500px]" src="https://i.ibb.co/4djFhnR/adidas-banner2.jpg" alt="" /></SwiperSlide>
+                <SwiperSlide><img className=" mx-auto h-[500px]" src="https://i.ibb.co/F589mZc/adidas-banner3.jpg" alt="" /></SwiperSlide>
                 <SwiperSlide><img className=" mx-auto h-[500px]" src="https://i.ibb.co/k5vNRfd/nike-banner-4.jpg" alt="" /></SwiperSlide>
             </Swiper>
         </div>

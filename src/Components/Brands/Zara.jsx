@@ -32,10 +32,10 @@ const Zara = () => {
                 autoplay={{ delay: 2000 }}
                 navigation
             >
-                <SwiperSlide><img className=" mx-auto h-[500px]" src='https://i.ibb.co/47nmbYX/Nike-banner.jpg' alt="" /></SwiperSlide>
-                <SwiperSlide><img className=" mx-auto h-[500px]" src="https://i.ibb.co/HgdTVy1/nike-banner-2.jpg" alt="" /></SwiperSlide>
-                <SwiperSlide><img className=" mx-auto h-[500px]" src="https://i.ibb.co/419hKr2/nike-banner-3.jpg" alt="" /></SwiperSlide>
-                <SwiperSlide><img className=" mx-auto h-[500px]" src="https://i.ibb.co/k5vNRfd/nike-banner-4.jpg" alt="" /></SwiperSlide>
+                <SwiperSlide><img className=" mx-auto h-[500px]" src='https://i.ibb.co/hZ07fJx/zara-banner1.jpg' alt="" /></SwiperSlide>
+                <SwiperSlide><img className=" mx-auto h-[500px]" src="https://i.ibb.co/XxwFghS/zara-banner2.jpg" alt="" /></SwiperSlide>
+                <SwiperSlide><img className=" mx-auto h-[500px]" src="https://i.ibb.co/Sdn51FG/zara-banner3.jpg" alt="" /></SwiperSlide>
+                {/* <SwiperSlide><img className=" mx-auto h-[500px]" src="https://i.ibb.co/k5vNRfd/nike-banner-4.jpg" alt="" /></SwiperSlide> */}
             </Swiper>
         </div>
         <div>
