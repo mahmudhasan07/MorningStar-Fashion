@@ -15,11 +15,12 @@ const NavBar = () => {
                             <li>
                                 <a>Brands</a>
                                 <ul className="p-2">
-                                    <NavLink><li className="">Nike</li></NavLink>
-                                    <NavLink><li className="">Adidas</li></NavLink>
-                                    <NavLink><li className="">Gucci</li></NavLink>
-                                    <NavLink><li className="">Zara</li></NavLink>
-                                    <NavLink><li className="">Calvin Klein</li></NavLink>
+                                    <NavLink to={`/nike`}><li className="">Nike</li></NavLink>
+                                    <NavLink to={`/adidas`}><li className="">Adidas</li></NavLink>
+                                    <NavLink to={`/gucci`}><li className="">Gucci</li></NavLink>
+                                    <NavLink to={`/zara`}><li className="">Zara</li></NavLink>
+                                    <NavLink to={`/ck`}><li className="">Calvin Klein</li></NavLink>
+                                    <NavLink to={`/h&m`}><li className="">H&M</li></NavLink>
                                 </ul>
                             </li>
                             <NavLink><li>Add Items</li></NavLink>
@@ -35,18 +36,20 @@ const NavBar = () => {
                                 <summary className="mr-2">Brands</summary>
                                 <ul className="p-4 border-2 z-10">
 
-                                    <NavLink><li className="py-1">Nike</li></NavLink>
-                                    <NavLink><li className="py-1">Adidas</li></NavLink>
-                                    <NavLink><li className="py-1">Gucci</li></NavLink>
-                                    <NavLink><li className="py-1">Zara</li></NavLink>
-                                    <NavLink><li className="py-1">Calvin Klein</li></NavLink>
+                                    <NavLink to={`/nike`}><li className="">Nike</li></NavLink>
+                                    <NavLink to={`/adidas`}><li className="">Adidas</li></NavLink>
+                                    <NavLink to={`/gucci`}><li className="">Gucci</li></NavLink>
+                                    <NavLink to={`/zara`}><li className="">Zara</li></NavLink>
+                                    <NavLink to={`/ck`}><li className="">Calvin Klein</li></NavLink>
+                                    <NavLink to={`/h&m`}><li className="">H&M</li></NavLink>
 
 
                                 </ul>
                             </details>
                         </li>
-                        <NavLink to={`/additems`}><li className="my-2 mr-3">Add Items</li></NavLink>
-                        <NavLink><li className="my-2 mr-2">Contact Us</li></NavLink>
+                        <NavLink to={`/additems`}><li className="my-2 m-3">Add Items</li></NavLink>
+                        <NavLink to={`/myitems`}><li className="my-2 m-3">My Items</li></NavLink>
+                        <NavLink><li className="my-2 m-2">Contact Us</li></NavLink>
                     </ul>
                 </div>
                 <div className="navbar-end">

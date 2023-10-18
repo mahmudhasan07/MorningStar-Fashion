@@ -10,6 +10,12 @@ import {
 } from "react-router-dom";
 import Home from './Components/Home/Home.jsx';
 import AddItem from './Components/AddItem/AddItem.jsx';
+import Nike from './Components/Brands/Nike.jsx';
+import Adidas from './Components/Brands/Adidas.jsx';
+import Gucci from './Components/Brands/Gucci.jsx';
+import Zara from './Components/Brands/Zara.jsx';
+import Calvin from './Components/Brands/Calvin.jsx';
+import Hommes from './Components/Brands/Hommes.jsx';
 
 const router = createBrowserRouter([
   {
@@ -23,7 +29,37 @@ const router = createBrowserRouter([
       {
         path : "/additems",
         element : <AddItem></AddItem>
-      }
+      },
+      {
+        path : "/nike",
+        element : <Nike></Nike>,
+        loader : ()=> fetch('http://127.0.0.1:300/items/nike')
+      },
+      {
+        path : "/adidas",
+        element : <Adidas></Adidas>,
+        loader : ()=> fetch('http://127.0.0.1:300/items/adidas')
+      },
+      {
+        path : "/gucci",
+        element : <Gucci></Gucci>,
+        loader : ()=> fetch('http://127.0.0.1:300/items/gucci')
+      },
+      {
+        path : "/zara",
+        element : <Zara></Zara>,
+        loader : ()=> fetch('http://127.0.0.1:300/items/zara')
+      },
+      {
+        path : "/ck",
+        element : <Calvin></Calvin>,
+        loader : ()=> fetch('http://127.0.0.1:300/items/calvin-klein')
+      },
+      {
+        path : "/h&m",
+        element : <Hommes></Hommes>,
+        loader : ()=> fetch('http://127.0.0.1:300/items/h&m')
+      },
     ]
   }
 ])
