@@ -20,7 +20,7 @@ const UpdateInfo = () => {
         const item = { name, brandName, type, price, note, rating, photourl}
         console.log(item);
 
-        fetch(`http://127.0.0.1:300/items/${bname}/${id}`, {
+        fetch(`https://morningstar-fashion-server-7p4yd35qw.vercel.app/items/${bname}/${id}`, {
             method: "PUT",
             headers: { 'content-type': "application/json" },
             body: JSON.stringify(item)

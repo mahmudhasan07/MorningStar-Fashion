@@ -13,7 +13,7 @@ const AddItem = () => {
         const item = { name, brandName, type, price, note, rating, photourl}
         console.log(item);
 
-        fetch(`http://127.0.0.1:300/items`, {
+        fetch(`https://morningstar-fashion-server-7p4yd35qw.vercel.app/items`, {
             method: "POST",
             headers: { 'content-type': "application/json" },
             body: JSON.stringify(item)

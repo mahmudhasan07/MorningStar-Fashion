@@ -11,69 +11,55 @@ import {
 import Home from './Components/Home/Home.jsx';
 import AddItem from './Components/AddItem/AddItem.jsx';
 import Nike from './Components/Brands/Nike.jsx';
-import Adidas from './Components/Brands/Adidas.jsx';
-import Gucci from './Components/Brands/Gucci.jsx';
-import Zara from './Components/Brands/Zara.jsx';
-import Calvin from './Components/Brands/Calvin.jsx';
-import Hommes from './Components/Brands/Hommes.jsx';
 import CardInfo from './Components/CardInfo/CardInfo.jsx';
 import UpdateInfo from './Components/UpdateInfo/UpdateInfo.jsx';
+import AddCart from './Components/AddCart/AddCart.jsx';
+import Login from './Components/User/Login.jsx';
+import Registration from './Components/User/Registration.jsx';
 
 const router = createBrowserRouter([
   {
-    path : "/",
-    element : <App></App>,
-    children :[
+    path: "/",
+    element: <App></App>,
+    children: [
       {
-        path : '/',
-        element : <Home></Home>
+        path: '/',
+        element: <Home></Home>
       },
       {
-        path : "/additems",
-        element : <AddItem></AddItem>
+        path: "/additems",
+        element: <AddItem></AddItem>
       },
       {
-        path : "/:brand",
-        element : <Nike></Nike>,
-        loader : ({params})=> fetch(`https://morningstar-fashion-server-2ujj2vepu.vercel.app/items/${params.brand}`)
-      },
-      // {
-      //   path : "/adidas",
-      //   element : <Adidas></Adidas>,
-      //   loader : ()=> fetch('http://127.0.0.1:300/items/adidas')
-      // },
-      // {
-      //   path : "/gucci",
-      //   element : <Gucci></Gucci>,
-      //   loader : ()=> fetch('http://127.0.0.1:300/items/gucci')
-      // },
-      // {
-      //   path : "/zara",
-      //   element : <Zara></Zara>,
-      //   loader : ()=> fetch('http://127.0.0.1:300/items/zara')
-      // },
-      // {
-      //   path : "/ck",
-      //   element : <Calvin></Calvin>,
-      //   loader : ()=> fetch('http://127.0.0.1:300/items/calvin-klein')
-      // },
-      // {
-      //   path : "/h&m",
-      //   element : <Hommes></Hommes>,
-      //   loader : ()=> fetch('http://127.0.0.1:300/items/h&m')
-      // },
-      {
-        path : "/:name/:id",
-        element : <CardInfo></CardInfo>,
-        loader : ({params})=> fetch(`https://morningstar-fashion-server-2ujj2vepu.vercel.app/items/${params.name}/${params.id}`)
+        path: "/:brand",
+        element: <Nike></Nike>,
+        loader: ({ params }) => fetch(`https://morningstar-fashion-server-7p4yd35qw.vercel.app/items/${params.brand}`)
       },
       {
-        path : "/:name/:id-update",
-        element : <UpdateInfo></UpdateInfo>,
-        loader : ({params})=> fetch(`https://morningstar-fashion-server-2ujj2vepu.vercel.app/items/${params.name}/${params.id}`)
+        path: "/mycarts",
+        element: <AddCart></AddCart>,
+        loader: () => fetch('https://morningstar-fashion-server-7p4yd35qw.vercel.app/mycarts')
+      },
+      {
+        path: "/:name/:id",
+        element: <CardInfo></CardInfo>,
+        loader: ({ params }) => fetch(`https://morningstar-fashion-server-7p4yd35qw.vercel.app/items/${params.name}/${params.id}`)
+      },
+      {
+        path: "/:name/:id-update",
+        element: <UpdateInfo></UpdateInfo>,
+        loader: ({ params }) => fetch(`https://morningstar-fashion-server-7p4yd35qw.vercel.app/items/${params.name}/${params.id}`)
       },
 
     ]
+  },
+  {
+    path: "/login",
+    element: <Login></Login>
+  },
+  {
+    path : "/registration",
+    element : <Registration></Registration>
   }
 ])
 

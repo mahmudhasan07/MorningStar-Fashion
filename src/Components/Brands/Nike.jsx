@@ -1,4 +1,4 @@
-import { useLoaderData, useNavigate } from "react-router-dom";
+import { useLoaderData, useNavigate, useParams } from "react-router-dom";
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination, Scrollbar, A11y, Autoplay, EffectCoverflow } from 'swiper/modules';
 import "swiper/css/navigation";
@@ -6,14 +6,26 @@ import 'swiper/css/effect-coverflow';
 
 // Import Swiper styles
 import 'swiper/css';
+import { useEffect, useState } from "react";
 
 
 const Nike = () => {
+    const [slider,setslider]= useState([])
+    const id = useParams()
     const loaderData = useLoaderData()
-    console.log(loaderData);
+    // console.log(loaderData);
+    useEffect(()=>{
+        fetch('https://morningstar-fashion-server-7p4yd35qw.vercel.app/slider')
+        .then(res=>res.json())
+        .then(data=> setslider(data))
+    },[])
+    console.log(id.brand);    
+
+    const newslider = slider.filter(element => element.brandName == id.brand)
+    console.log(newslider);
     return (
         <section>
-            <h1 className="text-5xl my-7 font-bold text-center underline"> {loaderData[0].brandName}</h1>
+            <h1 className="text-5xl my-7 font-bold text-center underline">{id.brand}</h1>
             <div className="lg:mx-8">
                 <Swiper
                     modules={[Navigation, EffectCoverflow, Autoplay, Pagination, Scrollbar, A11y]}
@@ -34,13 +46,10 @@ const Nike = () => {
                     autoplay={{ delay: 2000 }}
                     navigation
                 >
-                    <SwiperSlide><img className=" mx-auto h-[500px]" src={loaderData[6]? loaderData[6].image1 : loaderData[0].image1} alt="" /></SwiperSlide>
-                    <SwiperSlide><img className=" mx-auto h-[500px]" src={loaderData[6]? loaderData[6].image2 : loaderData[0].image2} alt="" /></SwiperSlide>
-                    <SwiperSlide><img className=" mx-auto h-[500px]" src={loaderData[6]? loaderData[6].image3 : loaderData[0].image3} alt="" /></SwiperSlide>
-                    <SwiperSlide><img className=" mx-auto h-[500px]" src={loaderData[6]? loaderData[6].image4 : loaderData[0].image4} alt="" /></SwiperSlide>
-                    {/* <SwiperSlide><img className=" mx-auto h-[500px]" src="https://i.ibb.co/HgdTVy1/nike-banner-2.jpg" alt="" /></SwiperSlide>
-                    <SwiperSlide><img className=" mx-auto h-[500px]" src="https://i.ibb.co/419hKr2/nike-banner-3.jpg" alt="" /></SwiperSlide>
-                    <SwiperSlide><img className=" mx-auto h-[500px]" src="https://i.ibb.co/k5vNRfd/nike-banner-4.jpg" alt="" /></SwiperSlide> */}
+                    <SwiperSlide><img className=" mx-auto h-[500px]" src={newslider[0]?.image1} alt="" /></SwiperSlide>
+                    <SwiperSlide><img className=" mx-auto h-[500px]" src={newslider[0]?.image2} alt="" /></SwiperSlide>
+                    <SwiperSlide><img className=" mx-auto h-[500px]" src={newslider[0]?.image3} alt="" /></SwiperSlide>
+                    <SwiperSlide><img className=" mx-auto h-[500px]" src={newslider[0]?.image4} alt="" /></SwiperSlide>
                 </Swiper>
             </div>
             <div>
