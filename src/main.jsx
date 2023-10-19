@@ -16,6 +16,8 @@ import Gucci from './Components/Brands/Gucci.jsx';
 import Zara from './Components/Brands/Zara.jsx';
 import Calvin from './Components/Brands/Calvin.jsx';
 import Hommes from './Components/Brands/Hommes.jsx';
+import CardInfo from './Components/CardInfo/CardInfo.jsx';
+import UpdateInfo from './Components/UpdateInfo/UpdateInfo.jsx';
 
 const router = createBrowserRouter([
   {
@@ -60,6 +62,17 @@ const router = createBrowserRouter([
         element : <Hommes></Hommes>,
         loader : ()=> fetch('http://127.0.0.1:300/items/h&m')
       },
+      {
+        path : "/:name/:id",
+        element : <CardInfo></CardInfo>,
+        loader : ({params})=> fetch(`http://127.0.0.1:300/items/${params.name}/${params.id}`)
+      },
+      {
+        path : "/:name/:id-update",
+        element : <UpdateInfo></UpdateInfo>,
+        loader : ({params})=> fetch(`http://127.0.0.1:300/items/${params.name}/${params.id}`)
+      },
+
     ]
   }
 ])

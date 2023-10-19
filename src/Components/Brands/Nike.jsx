@@ -1,4 +1,4 @@
-import { useLoaderData } from "react-router-dom";
+import { useLoaderData, useNavigate } from "react-router-dom";
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination, Scrollbar, A11y, Autoplay, EffectCoverflow } from 'swiper/modules';
 import "swiper/css/navigation";
@@ -54,8 +54,17 @@ const Nike = () => {
 };
 
 const Card = ({ card }) => {
+    const navigate = useNavigate()
     const handleitem =(id)=>{
         console.log(id);
+        const name = card.brandName.toLowerCase()
+        console.log(name);
+        navigate(`/${name}/${id}`)
+    }
+
+    const handleupdate=(id)=>{
+const name = card.brandName.toLowerCase()
+navigate(`/${name}/${id}-update`)
     }
     return (
         <div className="card w-72 border-2 border-gray-400  shadow-2xl p-2">
@@ -68,7 +77,7 @@ const Card = ({ card }) => {
             </div>
             <div className="flex  justify-around">
                 <button onClick={()=>handleitem(card._id)} className="btn">Details</button>
-                <button className="btn">Update</button>
+                <button onClick={()=>handleupdate(card._id)} className="btn">Update</button>
             </div>
 
         </div>
