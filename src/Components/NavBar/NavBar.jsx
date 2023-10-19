@@ -36,12 +36,12 @@ const NavBar = () => {
                                 <summary className="mr-2">Brands</summary>
                                 <ul className="p-4 border-2 z-10">
 
-                                    <NavLink to={`/nike`}><li className="">Nike</li></NavLink>
-                                    <NavLink to={`/adidas`}><li className="">Adidas</li></NavLink>
-                                    <NavLink to={`/gucci`}><li className="">Gucci</li></NavLink>
-                                    <NavLink to={`/zara`}><li className="">Zara</li></NavLink>
-                                    <NavLink to={`/ck`}><li className="">Calvin Klein</li></NavLink>
-                                    <NavLink to={`/h&m`}><li className="">H&M</li></NavLink>
+                                    <NavLink to={`/Nike`}><li className="">Nike</li></NavLink>
+                                    <NavLink to={`/Adidas`}><li className="">Adidas</li></NavLink>
+                                    <NavLink to={`/Gucci`}><li className="">Gucci</li></NavLink>
+                                    <NavLink to={`/Zara`}><li className="">Zara</li></NavLink>
+                                    <NavLink to={`/Calvin Klein`}><li className="">Calvin Klein</li></NavLink>
+                                    <NavLink to={`/H&M`}><li className="">H&M</li></NavLink>
 
 
                                 </ul>

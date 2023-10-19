@@ -33,44 +33,44 @@ const router = createBrowserRouter([
         element : <AddItem></AddItem>
       },
       {
-        path : "/nike",
+        path : "/:brand",
         element : <Nike></Nike>,
-        loader : ()=> fetch('http://127.0.0.1:300/items/nike')
+        loader : ({params})=> fetch(`https://morningstar-fashion-server-2ujj2vepu.vercel.app/items/${params.brand}`)
       },
-      {
-        path : "/adidas",
-        element : <Adidas></Adidas>,
-        loader : ()=> fetch('http://127.0.0.1:300/items/adidas')
-      },
-      {
-        path : "/gucci",
-        element : <Gucci></Gucci>,
-        loader : ()=> fetch('http://127.0.0.1:300/items/gucci')
-      },
-      {
-        path : "/zara",
-        element : <Zara></Zara>,
-        loader : ()=> fetch('http://127.0.0.1:300/items/zara')
-      },
-      {
-        path : "/ck",
-        element : <Calvin></Calvin>,
-        loader : ()=> fetch('http://127.0.0.1:300/items/calvin-klein')
-      },
-      {
-        path : "/h&m",
-        element : <Hommes></Hommes>,
-        loader : ()=> fetch('http://127.0.0.1:300/items/h&m')
-      },
+      // {
+      //   path : "/adidas",
+      //   element : <Adidas></Adidas>,
+      //   loader : ()=> fetch('http://127.0.0.1:300/items/adidas')
+      // },
+      // {
+      //   path : "/gucci",
+      //   element : <Gucci></Gucci>,
+      //   loader : ()=> fetch('http://127.0.0.1:300/items/gucci')
+      // },
+      // {
+      //   path : "/zara",
+      //   element : <Zara></Zara>,
+      //   loader : ()=> fetch('http://127.0.0.1:300/items/zara')
+      // },
+      // {
+      //   path : "/ck",
+      //   element : <Calvin></Calvin>,
+      //   loader : ()=> fetch('http://127.0.0.1:300/items/calvin-klein')
+      // },
+      // {
+      //   path : "/h&m",
+      //   element : <Hommes></Hommes>,
+      //   loader : ()=> fetch('http://127.0.0.1:300/items/h&m')
+      // },
       {
         path : "/:name/:id",
         element : <CardInfo></CardInfo>,
-        loader : ({params})=> fetch(`http://127.0.0.1:300/items/${params.name}/${params.id}`)
+        loader : ({params})=> fetch(`https://morningstar-fashion-server-2ujj2vepu.vercel.app/items/${params.name}/${params.id}`)
       },
       {
         path : "/:name/:id-update",
         element : <UpdateInfo></UpdateInfo>,
-        loader : ({params})=> fetch(`http://127.0.0.1:300/items/${params.name}/${params.id}`)
+        loader : ({params})=> fetch(`https://morningstar-fashion-server-2ujj2vepu.vercel.app/items/${params.name}/${params.id}`)
       },
 
     ]
