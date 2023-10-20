@@ -23,7 +23,7 @@ const CardInfo = () => {
             }
             
         )
-        swal("Good job!", "You clicked the button!", "success")
+        swal("Successfully", "You added the product!", "success")
     }
     return (
         <section className="lg:my-10 my-5">

@@ -1,4 +1,5 @@
 import { useLoaderData } from "react-router-dom";
+import swal from 'sweetalert';
 
 const UpdateInfo = () => {
     const loadData = useLoaderData()
@@ -27,6 +28,7 @@ const UpdateInfo = () => {
         })
         .then(res=> res.json())
         .then(data => {console.log(data)})
+        swal("Successfully", "You updated the product!", "success")
     }
     return (
         <section>

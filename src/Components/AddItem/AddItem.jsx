@@ -1,3 +1,4 @@
+import swal from 'sweetalert';
 const AddItem = () => {
     const handleadd = (e) => {
         e.preventDefault()
@@ -13,14 +14,16 @@ const AddItem = () => {
         const item = { name, brandName, type, price, note, rating, photourl}
         console.log(item);
 
-        fetch(`https://morningstar-fashion-server-7p4yd35qw.vercel.app/items`, {
+        fetch(`https://morningstar-fashion-server.vercel.app/items`, {
             method: "POST",
             headers: { 'content-type': "application/json" },
             body: JSON.stringify(item)
         })
         .then(res=> res.json())
         .then(data => {console.log(data)})
+        swal("Successfully", "You added the product!", "success")
     }
+
     return (
         <section>
             <div className=" pb-2  bg-base-200">

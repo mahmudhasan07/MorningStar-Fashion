@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useLoaderData } from "react-router-dom";
-import swal from 'sweetalert';
+import Swal from 'sweetalert2'
+
 
 
 const AddCart = () => {
@@ -19,8 +20,8 @@ const AddCart = () => {
 
 const Cart = ({ card, array, setarray }) => {
     const handledelete = (id) => {
-
-        swal.fire({
+        console.log(id);
+        Swal.fire({
             title: 'Are you sure?',
             text: "You won't be able to revert this!",
             icon: 'warning',
@@ -33,19 +34,20 @@ const Cart = ({ card, array, setarray }) => {
                 fetch(`https://morningstar-fashion-server.vercel.app/mycarts/${id}`, {
                     method: "DELETE"
                 })
+                const data = array.filter(element => element._id !== id)
+                setarray(data)
                 Swal.fire(
                     'Deleted!',
                     'Your file has been deleted.',
                     'success'
                 )
-
             }
         })
 
 
 
-        const data = array.filter(element => element._id !== id)
-        setarray(data)
+
+
 
     }
     return (

@@ -11,7 +11,7 @@ const NavBar = ({ handletheme }) => {
         logOut()
     }
     return (
-        <div className=" border border-black border-gray-400 bg-orange-300 shadow-xl ">
+        <div className=" border  border-black border-gray-400 bg-orange-300 shadow-xl ">
             <div className="navbar bg-transparent bg-opacity-40  bg-base-100">
                 <div className="navbar-start">
                     <div className="dropdown">
@@ -24,12 +24,12 @@ const NavBar = ({ handletheme }) => {
                             <li>
                                 <a>Brands</a>
                                 <ul className="p-2 bg-orange-500">
-                                    <NavLink to={`/nike`}><li className="">Nike</li></NavLink>
-                                    <NavLink to={`/adidas`}><li className="">Adidas</li></NavLink>
-                                    <NavLink to={`/gucci`}><li className="">Gucci</li></NavLink>
-                                    <NavLink to={`/zara`}><li className="">Zara</li></NavLink>
-                                    <NavLink to={`/ck`}><li className="">Calvin Klein</li></NavLink>
-                                    <NavLink to={`/h&m`}><li className="">H&M</li></NavLink>
+                                    <NavLink to={`/Nike`}><li className="">Nike</li></NavLink>
+                                    <NavLink to={`/Adidas`}><li className="">Adidas</li></NavLink>
+                                    <NavLink to={`/Gucci`}><li className="">Gucci</li></NavLink>
+                                    <NavLink to={`/Zara`}><li className="">Zara</li></NavLink>
+                                    <NavLink to={`/Calvin Klein`}><li className="">Calvin Klein</li></NavLink>
+                                    <NavLink to={`/H&M`}><li className="">H&M</li></NavLink>
                                 </ul>
                             </li>
                             <NavLink><li>Add Items</li></NavLink>
@@ -47,20 +47,13 @@ const NavBar = ({ handletheme }) => {
                                 <ul className="p-4 border-2 bg-orange-300 z-10">
 
 
-                                    <NavLink className={({ isActive, isPending }) =>
-                                    isPending ? "" :    isActive ? "bg-white p-1 rounded-xl" : ""} to={`/all-items`}><li className="">All Category</li></NavLink>
-                                    <NavLink className={({ isActive, isPending }) =>
-                                    isPending ? "" :    isActive ? "bg-white p-1 rounded-xl" : ""} to={`/Nike`}><li className="">Nike</li></NavLink>
-                                    <NavLink className={({ isActive, isPending }) =>
-                                     isPending ? "" :   isActive ? "bg-white p-1 rounded-xl" : ""} to={`/Adidas`}><li className="">Adidas</li></NavLink>
-                                    <NavLink className={({ isActive, isPending }) =>
-                                      isPending ? "" :  isActive ? "bg-white p-1 rounded-xl" : ""} to={`/Gucci`}><li className="">Gucci</li></NavLink>
-                                    <NavLink className={({ isActive, isPending }) =>
-                                      isPending ? "" :  isActive ? "bg-white p-1 rounded-xl" : ""} to={`/Zara`}><li className="">Zara</li></NavLink>
-                                    <NavLink className={({ isActive, isPending }) =>
-                                     isPending ? "" :   isActive ? "bg-white p-1 rounded-xl" : ""} to={`/Calvin Klein`}><li className="">Calvin Klein</li></NavLink>
-                                    <NavLink className={({ isActive, isPending }) =>
-                                        isActive ? "bg-white p-1 rounded-xl" : ""} to={`/H&M`}><li className="">H&M</li></NavLink>
+                                    <NavLink to={`/all-items`}><li className="">All Category</li></NavLink>
+                                    <NavLink  to={`/Nike`}><li className="">Nike</li></NavLink>
+                                    <NavLink  to={`/Adidas`}><li className="">Adidas</li></NavLink>
+                                    <NavLink to={`/Gucci`}><li className="">Gucci</li></NavLink>
+                                    <NavLink  to={`/Zara`}><li className="">Zara</li></NavLink>
+                                    <NavLink  to={`/Calvin Klein`}><li className="">Calvin Klein</li></NavLink>
+                                    <NavLink to={`/H&M`}><li className="">H&M</li></NavLink>
 
 
                                 </ul>
@@ -82,9 +75,9 @@ const NavBar = ({ handletheme }) => {
                                 isActive ? "bg-white p-1 rounded-xl btn" : "btn bg-orange-500"} to={`/login`}>login</NavLink>
                     }
                 </div>
-                <div>
+                {/* <div>
                     <button onClick={handletheme} className="btn bg-orange-500">hi</button>
-                </div>
+                </div> */}
             </div>
         </div>
     );
