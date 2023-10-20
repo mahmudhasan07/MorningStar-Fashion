@@ -81,7 +81,7 @@ const AddItem = () => {
 
                             </div>
                             <div className="text-center my-3">
-                                <button className="btn w-1/3 text-lg ">Add Item</button>
+                                <button className="btn w-1/3 text-lg bg-orange-500 ">Add Item</button>
                             </div>
                         </form>
                     </div>

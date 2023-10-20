@@ -1,8 +1,14 @@
-import { Link } from "react-router-dom";
+import { useContext } from "react";
+import { Link, useNavigate } from "react-router-dom";
+import { Context } from "../ContextAPI/ContextAPI";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 
 const Registration = () => {
-    const handlereg =(e)=>{
+    const { createUser, logOut, updateInfo } = useContext(Context)
+    const nagivate = useNavigate()
+    const handlereg = (e) => {
         e.preventDefault()
         const form = event.target
         const name = form.name.value
@@ -10,13 +16,35 @@ const Registration = () => {
         const photourl = form.photourl.value
         const email = form.email.value
         const password = form.password.value
+
+        if (!/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%^*?&])[A-Za-z\d@$!%^*?&]{6,}$/.test(password)) {
+            toast.warn('Password must be 6 character with UpperCase & LowerCase , symbol and number ')
+            return;
+        }
+
+        createUser(email, password)
+            .then(result => {
+                console.log(result.user);
+                updateInfo(name, photourl)
+                    .then(result => {
+                        logOut()
+                        nagivate('/login')
+                    })
+                    .catch(error => {
+                        console.log(error.message);
+                    })
+            })
+            .catch(error => {
+                console.log(error.message);
+            })
+
     }
     return (
         <section>
             <div className="">
                 <div className=" flex-col my-10 mx-auto">
                     <div className="text-center lg:text-left">
-                        <h1 className="text-5xl text-center mb-5 font-bold">Login now!</h1>
+                        <h1 className="text-5xl text-center mb-5 font-bold">Registration now!</h1>
                     </div>
                     <div className="card mx-auto  w-2/3 shadow-2xl bg-base-100">
                         <form onSubmit={handlereg} className="card-body">
@@ -57,12 +85,13 @@ const Registration = () => {
                                 <Link to={`/login`} className="text-orange-500 font-semibold">Already User??</Link>
                             </div>
                             <div className="form-control mt-6">
-                                <button  className="btn btn-primary">Login</button>
+                                <button className="btn btn-primary">Login</button>
                             </div>
                         </form>
                     </div>
                 </div>
             </div>
+            <ToastContainer></ToastContainer>
         </section>
     );
 };

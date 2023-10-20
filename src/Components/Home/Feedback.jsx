@@ -31,7 +31,7 @@ const Feedback = () => {
                 className=' p-2'
             >
                 <SwiperSlide>
-                    <div className='border-2 rounded-xl  border-orange-300 p-5'>
+                    <div data-aos="zoom-in-up" className='border-2 rounded-xl  border-orange-300 p-5'>
                         <h1 className='font-bold mb-1'><span>Customer:</span> Nelima Afroz</h1>
                         <p className='font-semibold mb-1'><span>Post Date:</span> October 10, 2023</p>
                         <p className='mb-1'>
@@ -40,7 +40,7 @@ const Feedback = () => {
                     </div>
                 </SwiperSlide>
                 <SwiperSlide>
-                    <div className='border-2 rounded-xl border-orange-300 p-5'>
+                    <div data-aos="zoom-in-up" className='border-2 rounded-xl border-orange-300 p-5'>
                         <h1 className='font-bold mb-1'><span>Customer:</span> Masud Rahman</h1>
                         <p className='font-semibold mb-1'><span>Post Date:</span> September 23, 2023</p>
                         <p className='mb-1'>
@@ -49,7 +49,7 @@ const Feedback = () => {
                     </div>
                 </SwiperSlide>
                 <SwiperSlide>
-                    <div className='border-2 rounded-xl border-orange-300 p-5'>
+                    <div data-aos="zoom-in-up" className='border-2 rounded-xl border-orange-300 p-5'>
                         <h1 className='font-bold mb-1'><span>Customer:</span> Labonno Akter</h1>
                         <p className='font-semibold mb-1'><span>Post Date:</span> September 10, 2023</p>
                         <p className='mb-1'>
@@ -58,7 +58,7 @@ const Feedback = () => {
                     </div>
                 </SwiperSlide>
                 <SwiperSlide>
-                    <div className='border-2 rounded-xl border-orange-300 p-5'>
+                    <div data-aos="zoom-in-up" className='border-2 rounded-xl border-orange-300 p-5'>
                         <h1 className='font-bold mb-1'><span>Customer:</span> Mehadi Hasan</h1>
                         <p className='font-semibold mb-1'><span>Post Date:</span> August 20, 2023</p>
                         <p className='mb-1'>
@@ -67,7 +67,7 @@ const Feedback = () => {
                     </div>
                 </SwiperSlide>
                 <SwiperSlide>
-                    <div className='border-2 rounded-xl border-orange-300 p-5'>
+                    <div data-aos="zoom-in-up" className='border-2 rounded-xl border-orange-300 p-5'>
                         <h1 className='font-bold mb-1'><span>Customer:</span> Sabbir Hasan</h1>
                         <p className='font-semibold mb-1'><span>Post Date:</span> June 10, 2023</p>
                         <p className='mb-1'>
@@ -76,7 +76,7 @@ const Feedback = () => {
                     </div>
                 </SwiperSlide>
                 <SwiperSlide>
-                    <div className='border-2 rounded-xl border-orange-300 p-5'>
+                    <div data-aos="zoom-in-up" className='border-2 rounded-xl border-orange-300 p-5'>
                         <h1 className='font-bold mb-1'><span>Customer:</span> Fariha Akter</h1>
                         <p className='font-semibold mb-1'><span>Post Date:</span> May 10, 2023</p>
                         <p className='mb-1'>
@@ -85,7 +85,7 @@ const Feedback = () => {
                     </div>
                 </SwiperSlide>
                 <SwiperSlide>
-                    <div className='border-2 rounded-xl border-orange-300 p-5'>
+                    <div data-aos="zoom-in-up" className='border-2 rounded-xl border-orange-300 p-5'>
                         <h1 className='font-bold mb-1'><span>Customer:</span> Mahmud Hasan</h1>
                         <p className='font-semibold mb-1'><span>Post Date:</span> April 10, 2023</p>
                         <p className='mb-1'>

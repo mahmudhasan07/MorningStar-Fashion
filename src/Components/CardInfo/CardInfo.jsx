@@ -1,4 +1,5 @@
 import { useLoaderData } from "react-router-dom";
+import swal from 'sweetalert';
 
 
 const CardInfo = () => {
@@ -14,13 +15,15 @@ const CardInfo = () => {
         const rating = loadData.rating 
         const photourl = loadData.photourl 
         const item = {name,brandName,type,price,note,rating,photourl}
-        fetch(`https://morningstar-fashion-server-7p4yd35qw.vercel.app/mycarts`,
+        fetch(`https://morningstar-fashion-server.vercel.app/mycarts`,
             {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify(item)
             }
+            
         )
+        swal("Good job!", "You clicked the button!", "success")
     }
     return (
         <section className="lg:my-10 my-5">
@@ -34,7 +37,7 @@ const CardInfo = () => {
                     <p className="text-lg mb-2"><span className="font-semibold">Type : </span>{loadData.type}</p>
                     <p className="text-lg">{loadData.note}</p>
                     <div>
-                        <button onClick={() => handlecart(loadData._id)} className="btn mt-5">Add Cart</button>
+                        <button onClick={() => handlecart(loadData._id)} className="btn mt-5 bg-orange-500">Add Cart</button>
                     </div>
                 </div>
             </div>

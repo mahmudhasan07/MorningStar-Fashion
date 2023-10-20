@@ -6,6 +6,8 @@ import 'swiper/css/effect-coverflow';
 
 // Import Swiper styles
 import 'swiper/css';
+import AOS from 'aos';
+import 'aos/dist/aos.css'; 
 import { useEffect, useState } from "react";
 
 
@@ -18,6 +20,7 @@ const Nike = () => {
         fetch('https://morningstar-fashion-server-7p4yd35qw.vercel.app/slider')
         .then(res=>res.json())
         .then(data=> setslider(data))
+        AOS.init();
     },[])
     console.log(id.brand);    
 
@@ -26,7 +29,7 @@ const Nike = () => {
     return (
         <section>
             <h1 className="text-5xl my-7 font-bold text-center underline">{id.brand}</h1>
-            <div className="lg:mx-8">
+            <div data-aos="zoom-in-up" className="lg:mx-8">
                 <Swiper
                     modules={[Navigation, EffectCoverflow, Autoplay, Pagination, Scrollbar, A11y]}
                     effect={'coverflow'}
@@ -80,17 +83,17 @@ const name = card.brandName
 navigate(`/${name}/${id}-update`)
     }
     return (
-        <div className="card w-72 border-2 border-gray-400  shadow-2xl p-2">
+        <div data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine" className="card w-72  border-2 border-gray-400  shadow-2xl p-2">
             <img className="w-72 h-80" src={card?.photourl} alt="" />
-            <div className="my-2">
+            <div className="my-2 flex-grow">
                 <h1><span>Name :</span> {card?.name}</h1>
                 <h1><span>Brand Name :</span> {card?.brandName}</h1>
                 <p><span>Price :</span> {card?.price} $</p>
                 <p><span>Rating :</span> {card?.rating}</p>
             </div>
-            <div className="flex  justify-around">
-                <button onClick={()=>handleitem(card?._id)} className="btn">Details</button>
-                <button onClick={()=>handleupdate(card?._id)} className="btn">Update</button>
+            <div className="flex   justify-around">
+                <button onClick={()=>handleitem(card?._id)} className="btn bg-orange-500">Details</button>
+                <button onClick={()=>handleupdate(card?._id)} className="btn bg-orange-500">Update</button>
             </div>
 
         </div>
