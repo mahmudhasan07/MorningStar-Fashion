@@ -19,6 +19,7 @@ import Registration from './Components/User/Registration.jsx';
 import ContextAPI from './Components/ContextAPI/ContextAPI.jsx';
 import PrivetRouter from './Components/Router/PrivetRouter.jsx';
 import ErrorPage from './Components/ErrorPage/ErrorPage.jsx';
+import AllItem from './Components/Brands/AllItem.jsx';
 
 const router = createBrowserRouter([
   {
@@ -33,6 +34,11 @@ const router = createBrowserRouter([
       {
         path: "/additems",
         element: <AddItem></AddItem>
+      },
+      {
+        path : '/all-items',
+        element : <AllItem></AllItem>,
+        loader : ()=> fetch('https://morningstar-fashion-server.vercel.app/items')
       },
       {
         path: "/:brand",

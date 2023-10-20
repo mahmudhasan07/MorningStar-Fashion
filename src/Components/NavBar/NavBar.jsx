@@ -20,7 +20,7 @@ const NavBar = ({ handletheme }) => {
                         </label>
                         <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
                             <NavLink className={({ isActive, isPending }) =>
-                                 isActive ? "bg-white" : ""}><li>Home</li></NavLink>
+                                isActive ? "bg-white" : ""}><li>Home</li></NavLink>
                             <li>
                                 <a>Brands</a>
                                 <ul className="p-2 bg-orange-500">
@@ -39,36 +39,39 @@ const NavBar = ({ handletheme }) => {
                 </div>
                 <div className="navbar-center hidden lg:flex">
                     <ul className="menu menu-horizontal px-1 text-base">
-                    <li className="my-2 mr-2"><NavLink className={({ isActive, isPending }) =>
-                             isPending ? ""  : isActive ? "bg-white p-1 rounded-xl" : ""}>Home</NavLink></li>
+                        <NavLink to={`/`} className={({ isActive, isPending }) =>
+                            isPending ? "" : isActive ? "bg-white p-1 rounded-xl" : ""}><li className="my-2 mr-2">Home</li></NavLink>
                         <li tabIndex={0}>
                             <details>
-                                <summary>Brands</summary>
+                                <summary >Brands</summary>
                                 <ul className="p-4 border-2 bg-orange-300 z-10">
 
-                                <li className=""> <NavLink className={({ isActive, isPending }) =>
-                                 isActive ? "bg-white p-1 rounded-xl" : ""} to={`/Nike`}>Nike</NavLink></li>
+
                                     <NavLink className={({ isActive, isPending }) =>
-                                 isActive ? "bg-white p-1 rounded-xl" : ""} to={`/Adidas`}><li className="">Adidas</li></NavLink>
+                                    isPending ? "" :    isActive ? "bg-white p-1 rounded-xl" : ""} to={`/all-items`}><li className="">All Category</li></NavLink>
                                     <NavLink className={({ isActive, isPending }) =>
-                                 isActive ? "bg-white p-1 rounded-xl" : ""} to={`/Gucci`}><li className="">Gucci</li></NavLink>
+                                    isPending ? "" :    isActive ? "bg-white p-1 rounded-xl" : ""} to={`/Nike`}><li className="">Nike</li></NavLink>
                                     <NavLink className={({ isActive, isPending }) =>
-                                 isActive ? "bg-white p-1 rounded-xl" : ""} to={`/Zara`}><li className="">Zara</li></NavLink>
+                                     isPending ? "" :   isActive ? "bg-white p-1 rounded-xl" : ""} to={`/Adidas`}><li className="">Adidas</li></NavLink>
                                     <NavLink className={({ isActive, isPending }) =>
-                                 isActive ? "bg-white p-1 rounded-xl" : ""} to={`/Calvin Klein`}><li className="">Calvin Klein</li></NavLink>
+                                      isPending ? "" :  isActive ? "bg-white p-1 rounded-xl" : ""} to={`/Gucci`}><li className="">Gucci</li></NavLink>
                                     <NavLink className={({ isActive, isPending }) =>
-                                 isActive ? "bg-white p-1 rounded-xl" : ""} to={`/H&M`}><li className="">H&M</li></NavLink>
+                                      isPending ? "" :  isActive ? "bg-white p-1 rounded-xl" : ""} to={`/Zara`}><li className="">Zara</li></NavLink>
+                                    <NavLink className={({ isActive, isPending }) =>
+                                     isPending ? "" :   isActive ? "bg-white p-1 rounded-xl" : ""} to={`/Calvin Klein`}><li className="">Calvin Klein</li></NavLink>
+                                    <NavLink className={({ isActive, isPending }) =>
+                                        isActive ? "bg-white p-1 rounded-xl" : ""} to={`/H&M`}><li className="">H&M</li></NavLink>
 
 
                                 </ul>
                             </details>
                         </li>
                         <NavLink className={({ isActive, isPending }) =>
-                                 isActive ? "bg-white p-1 rounded-xl" : ""} to={`/additems`}><li className="my-2 m-3">Add Items</li></NavLink>
+                         isPending ? "" :   isActive ? "bg-white p-1 rounded-xl" : ""} to={`/additems`}><li className="my-2 m-3">Add Items</li></NavLink>
                         <NavLink className={({ isActive, isPending }) =>
-                                 isActive ? "bg-white p-1 rounded-xl" : ""} to={`/mycarts`}><li className="my-2 m-3">My carts</li></NavLink>
+                          isPending ? "" :  isActive ? "bg-white p-1 rounded-xl" : ""} to={`/mycarts`}><li className="my-2 m-3">My carts</li></NavLink>
                         <NavLink className={({ isActive, isPending }) =>
-                                 isActive ? "bg-white p-1 rounded-xl" : ""} to={`/contact-us`}><li className="my-2 m-2">Contact Us</li></NavLink>
+                          isPending ? "" :  isActive ? "bg-white p-1 rounded-xl" : ""} to={`/contact-us`}><li className="my-2 m-2">Contact Us</li></NavLink>
                     </ul>
                 </div>
                 <div className="navbar-end">
@@ -76,7 +79,7 @@ const NavBar = ({ handletheme }) => {
                         user ? <div className="flex gap-2"> <img className="w-10 rounded-full" src={user.photoURL} alt="" /> <p className="my-auto font-bold">{user.displayName}</p> <NavLink onClick={handlelogout} className="btn bg-orange-500">LogOut</NavLink></div>
                             :
                             <NavLink className={({ isActive, isPending }) =>
-                            isActive ? "bg-white p-1 rounded-xl btn" : "btn bg-orange-500"} to={`/login`}>login</NavLink>
+                                isActive ? "bg-white p-1 rounded-xl btn" : "btn bg-orange-500"} to={`/login`}>login</NavLink>
                     }
                 </div>
                 <div>
