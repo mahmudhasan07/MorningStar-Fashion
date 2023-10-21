@@ -82,7 +82,7 @@ const NavBar = ({ theme, handlelight, handledark }) => {
                         user ? <div className="flex flex-wrap gap-2"> <img className="w-10  my-auto rounded-full" src={user.photoURL} alt="" /> <p className="my-auto font-bold">{user.displayName}</p> <NavLink onClick={handlelogout} className="btn my-auto bg-orange-500">LogOut</NavLink></div>
                             :
                             <NavLink className={({ isActive, isPending }) =>
-                                isActive ? "bg-white p-1 rounded-xl btn" : "btn bg-orange-500"} to={`/login`}>login</NavLink>
+                                isActive ? "bg-white p-1 rounded-xl btn my-auto " : "my-auto btn bg-orange-500"} to={`/login`}>login</NavLink>
                     }
                 <div>
                     

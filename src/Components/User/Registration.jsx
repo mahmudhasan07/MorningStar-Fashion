@@ -3,6 +3,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { Context } from "../ContextAPI/ContextAPI";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import Swal from 'sweetalert2'
 
 
 const Registration = () => {
@@ -37,6 +38,8 @@ const Registration = () => {
             .catch(error => {
                 console.log(error.message);
             })
+
+            Swal.fire('SuccessFully you registration  ')
 
     }
     return (
