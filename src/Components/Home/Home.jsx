@@ -40,7 +40,7 @@ const Home = () => {
     }
     return (
         <section>
-            <div data-aos="fade-down" className="lg:mx-10 mx-3 lg:my-14 my-5" >
+            <div data-aos="fade-down" className="lg:mx-10  lg:my-14 my-5" >
                 <Swiper
                     modules={[Navigation, EffectCoverflow, Autoplay, Pagination, Scrollbar, A11y]}
                     effect={'coverflow'}
@@ -69,8 +69,8 @@ const Home = () => {
 
             <div className="lg:my-16 my-5 ">
                 <h1 className="text-4xl font-bold text-center ">Why You Choice Us !!!</h1>
-                <div  className="flex flex-wrap-reverse justify-around gap-5 lg:mx-12 lg:mt-10 mt-3">
-                    <div data-aos="fade-right" data-aos-delay="300"  className="lg:w-1/3 px-5">
+                <div  className="flex flex-wrap-reverse justify-around  lg:mx-12 lg:mt-10 mt-3">
+                    <div data-aos="fade-right" data-aos-delay="300"  className="lg:w-1/3 px-10">
                         <ul className="list-decimal">
                             <li>
                                 <span className="text-lg font-semibold">Unique Fashion Selection : </span> Your website offers a curated collection of clothing and accessories that stand out from mainstream fashion, giving shoppers a unique and distinctive style.
@@ -97,7 +97,7 @@ const Home = () => {
 
             <div>
                 <h1 className="text-3xl font-bold text-center lg:my-10 my-5">Our Provide Brands </h1>
-                <div data-aos="fade-up" className="flex flex-wrap gap-10 justify-center lg:my-10 my-5 ">
+                <div data-aos="fade-up" className="flex flex-wrap gap-10 justify-center  lg:my-10 my-5 ">
                     <div onClick={handlenike} className="w-80 border-2 border-gray-400 p-2 card">
                         <img className="w-80 h-56" src='https://i.ibb.co/5xFK9wF/desktop-wallpaper-best-nike-logo-gallery.jpg' alt="" />
                         <h1 className="text-lg text-center font-semibold">Nike</h1>

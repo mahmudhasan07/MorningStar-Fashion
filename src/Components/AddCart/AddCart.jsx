@@ -9,9 +9,11 @@ const AddCart = () => {
     const [array, setarray] = useState(loader)
     return (
         <section>
-            <div className="flex flex-wrap gap-5 lg:my-16 my-5">
+            <div className="flex h-screen flex-wrap gap-5 lg:my-16 my-5">
                 {
-                    array.map(element => <Cart key={element._id} setarray={setarray} array={array} card={element}></Cart>)
+                 array.length >0 ? array.map(element => <Cart key={element._id} setarray={setarray} array={array} card={element}></Cart>)
+                 : 
+                 <h1 className=" text-4xl font-semibold my-auto mx-auto">No Items Added in your cart</h1>
                 }
             </div>
         </section>
